@@ -29,7 +29,7 @@
                     <li class="nav-item"><a href="#" class="nav-link text-white">Cadastar</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-white">Entrar</a></li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link text-white ">
+                        <a href="#" class="nav-link text-danger ">
                             <svg class="bi" width="24" height="24" fill="currentColor">
                                 <use xlink:href="/bi.svg#cart3"></use>
                             </svg>
@@ -41,31 +41,91 @@
         </div>
     </nav>
     <!--  *****************************   -->
-    <header>
-
-
+    <header class="container">
+        <div id="carouselMain" class="carousel carousel-dark slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselMain" data-slide-to="1" class="active"></li>
+                <li data-target="#carouselMain" data-slide-to="2" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center" data-interval="3000">
+                    <img src="./imagens/bnspider.png" alt="banner" class="img-fluid d-none d-md-block">
+                    <img src="./imagens/bannerps5.jpg" alt="banner" class="img-fluid d-block d-md-none">
+                </div>
+                <div class="carousel-item text-center" data-interval="3000">
+                    <img src="./imagens/bnps5.png" alt="banner" class="img-fluid d-none d-md-block">
+                </div>
+                <div class="carousel-item text-center" data-interval="3000">
+                    <img src="./imagens/bnspider.png" alt="banner" class="img-fluid d-none d-md-block">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselMain" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselMain" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden"></span>
+            </a>
+        </div>
+        <hr class="mt-3"><!--Linha de separação-->
     </header>
-
+ <!--  *****************************   -->
     <main>
-
-
-
+        <div class="container">
+            <div class="row"> <!-- Barra de busca -->
+                <div class="col-12 col-md-5">
+                    <form class="justify-content-center justify-content-md-start mb-3 mb-md-0">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" placeholder="Digite aqui o que procura">
+                            <button class="btn btn-danger">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
+                        <form class="ml-3 d-inline-block">
+                            <select class="form-select form-select-sm">
+                                <option>Ordernar pelo nome</option>
+                                <option>Ordernar pelo menor preço</option>
+                                <option>Ordernar pelo maior preço</option>
+                            </select>
+                        </form>
+                        <nav class="d-inline-block">
+                            <ul class="pagination pagination-sm my-0">
+                                <li class="page-item"><button class="page-link">1</button></li>
+                                <li class="page-item"><button class="page-link">2</button></li>
+                                <li class="page-item disabled"><button class="page-link">3</button></li>
+                                <li class="page-item"><button class="page-link">4</button></li>
+                                <li class="page-item"><button class="page-link">5</button></li>
+                                <li class="page-item"><button class="page-link">6</button></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-3"> <!--Linha de separação-->
+            
+        </div>
     </main>
-
-
-    <footer>
-
-
+ <!--  *****************************   -->
+    <footer class="border-top fixed-bottom text-muted bg-info">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-12 col-md-4 text-center text-md-left text-dark">
+                   &copy;2022 - GamesShopee Martins Ltda 
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <a href="#" class="text-decoration-none text-dark">Politica de Privacidade</a>
+                 </div>
+                 <div class="col-12 col-md-4 text-center text-md-right">
+                    <a href="#" class="text-decoration-none text-dark">Administar</a>
+                 </div>
+            </div>
+        </div>
     </footer>
-
-
-
-
-
-
-
-
-
+ <!--  *****************************   -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
