@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+   
 
     <title>Games Store</title>
 
@@ -40,7 +40,7 @@
                         <li class="nav-item"><a href="/html/cadastro.html" class="nav-link text-white">Cadastar</a></li>
                         <li class="nav-item"><a href="/html/login.html" class="nav-link text-white">Entrar</a></li>
                         <li class="nav-item ">
-                            <a href="/html/carrinho.html" class="nav-link text-danger ">
+                            <a href="carrinho.html" class="nav-link text-danger ">
                                 <svg class="bi" width="24" height="24" fill="currentColor">
                                     <use xlink:href="/bi.svg#cart3" />
                                 </svg>
@@ -119,20 +119,20 @@
             </div>
             <hr class="mt-3">
             <!--Linha de separação-->
-            <div class="row g-3">
+            <div class="row g-3"><!-- Lista de produtos -->
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-lg-stretch">
                     <div class="card text-center bg-light">
                         <img src="/imagens/spiderman.png" class="card-img-top">
                         <!-- ======================== Spider-Man ===================================   -->
-                        <div class="card-text bg-info mt-2"><span>R$ </span>249,90</div>
+                        <div class="card-text bg-info mt-2">R$ <span class="valorProduto">249,90</span></div>
                         <div class="card-body">
-                            <h5>Spider-Man PS4</h5>
+                            <h5 class="nameProduto">Spider-Man PS4</h5>
                             <p class="card-text truncate-3l">Jogo do Spider-man PS4, lancamento 2021. </p>
                         </div>
                         <div class="card-footer">
                             <form class="d-block">
-                                <button onclick="resumo()" class="btn btn-danger">Adicionar carrinho</button>
-                                <small class="text-success">20 unidades em estoque</small>
+                                <button type="button" class="btAdicionar  btn btn-danger">Adicionar carrinho</button>
+                                <small class="text-success"><span class="quantProduto">20</span> unidades em estoque</small>
                             </form>
                         </div>
                     </div>
@@ -147,7 +147,8 @@
                             <p class="card-text truncate-3l">Jogo do Demon's Souls PS5, lancamento 2020. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button onclick="resumo()"  class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block">
+                                <button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">20 unidades em estoque</small>
                             </form>
                         </div>
@@ -163,7 +164,7 @@
                             <p class="card-text truncate-3l">Jogo do Grand Theft Auto 5 PS4, lancamento 2020. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">20 unidades em estoque</small>
                             </form>
                         </div>
@@ -180,7 +181,7 @@
                             </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">6 unidades em estoque</small>
                             </form>
                         </div>
@@ -196,7 +197,7 @@
                             <p class="card-text truncate-3l">Jogo do Far Cry 6 PS5, lancamento 2020. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">20 unidades em estoque</small>
                             </form>
                         </div>
@@ -231,7 +232,7 @@
                             <p class="card-text truncate-3l">Jogo do The Last of Us P2 PS4, lancamento 2021. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">23 unidades em estoque</small>
                             </form>
                         </div>
@@ -247,7 +248,7 @@
                             <p class="card-text truncate-3l">Jogo do Horizon Forbidden West PS5, lancamento 2020. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">15 unidades em estoque</small>
                             </form>
                         </div>
@@ -263,7 +264,7 @@
                             <p class="card-text truncate-3l">Jogo do Elder Ring PS5, lancamento 2022. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button"  class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">10 unidades em estoque</small>
                             </form>
                         </div>
@@ -279,7 +280,7 @@
                             <p class="card-text truncate-3l">Jogo do Grand Turismo 7 PS5, lancamento 2022. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">10 unidades em estoque</small>
                             </form>
                         </div>
@@ -295,7 +296,7 @@
                             <p class="card-text truncate-3l">Jogo do Camiseta PS5, lançamento 2022. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">10 unidades em estoque</small>
                             </form>
                         </div>
@@ -311,7 +312,7 @@
                             <p class="card-text truncate-3l">Jogo do Headset Sem Fio Sony PS5, lancamento 2022. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">10 unidades em estoque</small>
                             </form>
                         </div>
@@ -327,7 +328,7 @@
                             <p class="card-text truncate-3l">Jogo do PlayStation®5 Câmera PS5, lancamento 2022. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">10 unidades em estoque</small>
                             </form>
                         </div>
@@ -343,7 +344,7 @@
                             <p class="card-text truncate-3l">Jogo doControle PS5, lancamento 2022. </p>
                         </div>
                         <div class="card-footer">
-                            <form class="d-block"><button class="btn btn-danger">Adicionar carrinho</button>
+                            <form class="d-block"><button type="button" onclick="addCarrinho()" class="btAdicionar btn btn-danger">Adicionar carrinho</button>
                                 <small class="text-success">10 unidades em estoque</small>
                             </form>
                         </div>
@@ -407,8 +408,14 @@
             </div>
         </div>
     </footer>
-    <!--  *****************************   -->
-    <script src="/javascript/index.js"></script>
+    <!--  *****************************  
+    
+    
+        <script src="/js/index.js"></script>
+    -->
+
+   
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>

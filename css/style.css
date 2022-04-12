@@ -1,7 +1,0 @@
-.truncate-3l{
-    display: -webkit-box;
-    -webkit-line-camp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
