@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
-    <title>Games Store :: Carrinho de Compras</title>
+    <title>Games Store :: Recuperar Senha</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="./icones/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./icones/favicon-32x32.png">
@@ -21,7 +21,6 @@
     <meta name="msapplication-config" content="./icones/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-
 <body style="min-width: 372px;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-info border-bottom shadow-sm mb-3 ">
         <div class="container">
@@ -50,61 +49,28 @@
             </div>
         </div>
     </nav>
-    <!--  *****************************   -->
+    <!--  *****************************   -->    
     <main class="mb-2 pb-2">
         <div class="container">
-            <h1>Carrinho de Compras</h1>
-            <hr>
-
-            <ul class="list-group mb-3">
-                <li class="list-group-item py-3">
-                    <div class="row g-3" >
-                        <div class="col-4 col-md-3 col-lg-2">
-                            <a href="#">
-                                <img src="/imagens/spiderman.png"  class="img-thumbnail">
-                            </a>
-                        </div>
-                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
-                            <h4><b><a href="#" class="text-decoration-none text-danger">Spider-Man PS5</a></b></h4>
-                            <h4><small>Jogo Spider-Man PS5, lançamento 2021.</small></h4>
-                        </div>
-                        <div class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
-                            <div class="input-group">
-                                <button type="button" class="btn btn-outline-dark btn-sm">
-                                    <svg class="bi" width="16" height="16" fill="currentColor">
-                                        <use xlink:href="../bi.svg#caret-down"/>
-                                    </svg>
-                                </button>
-                                <input type="text" value="4" class="form-control text-center border-dark">
-                                <button type="button" class="btn btn-outline-dark btn-sm">
-                                    <svg class="bi" width="16" height="16" fill="currentColor">
-                                        <use xlink:href="../bi.svg#caret-up"/>
-                                    </svg>
-                                </button>
-                                <button type="button" class="btn btn-outline-danger btn-sm">
-                                    <svg class="bi" width="16" height="16" fill="currentColor">
-                                        <use xlink:href="../bi.svg#trash"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="text-right mt-2">
-                                <span class="text-dark">Valor R$ 249,90</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item py-3">
-                    <div class="text-right">
-                        <h4 class="text-dark mb-3">Valor Total: R$ 249,90</h4>
-                        <a href="../index.html" class="btn btn-outline-success btn-lg">Continuar Comprando</a>
-                        <button class="btn btn-danger btn-lg">Fechar Compra</button>
-                    </div>
-                </li>
-            </ul>
-            
+            <div class="row justify-content-center">
+                <form class="col-sm-10 col-md-8 col-lg-6">
+                <h1 class="mb-3">Cadastrar Nova Senha</h1>
+                
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" autofocus id="txtNovaSenha" placeholder=" Nova Senha ">
+                    <label for="txtNovaSenha">Digite aqui sua nova senha</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" autofocus id="txtConfSenha" placeholder=" Repetir senha ">
+                    <label for="txtConfSenha">Repita a senha digitada acima</label>
+                </div>
+                
+                <button class="btn btn-lg btn-danger" type="button" onclick="window.location.href='./confirmecadastrosenha.html'">Cadastrar Nova Senha</button>
+                
+                
+                </form>
+            </div>  
         </div>
-
-
     </main>
     <!--  *****************************   -->
     <div class="d-block d-md-none" style="height: 273px;"></div>
@@ -112,7 +78,6 @@
     <div class="d-none d-lg-block" style="height: 129px;"></div>
 
     <!--  *****************************   -->
-
     <footer class="border-top fixed-bottom text-muted bg-info">
         <div class="container">
             <div class="row py-3">
