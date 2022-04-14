@@ -1,0 +1,42 @@
+:root{
+    --primary-color: #0d6efd;
+    --secundary-color: #FFF1CC;
+    --shadow-color: #CCC;
+    --text-color: #FFF;
+}
+
+
+.tabelaHeader{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+    background-color: #cac8c8;
+}
+.tabelaHeader th{
+    height: 50px;
+    padding-left: 20px;
+    font-size: 1.2rem;    
+}
+.tabelaHeader td{
+    height: 50px;
+    padding-left: 20px;
+}
+
+.tabelaHeader th:last-child,
+.tabelaHeader td:last-child{
+    padding: 5px;
+    min-width: 140px;
+    text-align: center;
+    
+}
+
+/* checkbox */
+.checkboxItem > input[type='checkbox'] {
+    width: 50px;
+    height: 50px;
+    font: inherit;
+    border-radius: 50px;
+}
+#tableProduto > input[type='checkbox']:checked + tr{
+    text-decoration:line-through;
+}

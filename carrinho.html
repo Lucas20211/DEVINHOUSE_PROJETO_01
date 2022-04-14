@@ -52,11 +52,51 @@
     </nav>
     <!--  *****************************   -->
     <main class="mb-2 pb-2">
-        <div class="container">
-            <h1>Carrinho de Compras</h1>
-            <hr>
-            <ul class="list-group mb-3" id="carrinhoCompra">
-               
+        
+           <!--  <ul class="list-group mb-3" id="carrinhoCompra"> -->
+                <div class="container">
+                    <h1>Carrinho de Compras</h1>
+                    <hr>
+        
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item py-3">
+                            <div class="row g-3">
+                                <div class="col-4 col-md-3 col-lg-2">
+                                    <a href="#">
+                                        <img src="/imagens/spiderman.png" class="img-thumbnail">
+                                    </a>
+                                </div>
+                                <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                                    <h4><b><a href="#" class="text-decoration-none text-danger">Spider-Man PS5</a></b></h4>
+                                    <h4><small>Jogo Spider-Man PS5, lançamento 2021.</small></h4>
+                                </div>
+                                <div class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                                    <div class="input-group">
+                                        
+                                        <input type="number" placeholder="Quantidade" class="quantidadeCompra form-control text-center border-dark">
+                                        
+                                        <button type="button" class="btn btn-outline-danger btn-sm">
+                                            <svg class="bi" width="16" height="16" fill="currentColor">
+                                                <use xlink:href="../bi.svg#trash"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="text-right mt-2">
+                                        <span class="text-dark">Valor R$ <span class="valorCompra">249,90</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <div class="text-right">
+                                <h4 class="text-dark mb-3">Valor Total: R$ <span class="valorTotal">249,90</span></h4> <!-- valorTotal para calculo do javascript --> 
+                                <a href="../index.html" class="btn btn-outline-success btn-lg">Continuar Comprando</a>
+                                <button class="btn btn-danger btn-lg">Fechar Compra</button>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
             </ul>   
         </div>
 
@@ -69,7 +109,7 @@
 
     <!--  *****************************   -->
 
-    <footer class="border-top fixed-bottom text-muted bg-info">
+    <footer class="border-top text-muted bg-info">
         <div class="container">
             <div class="row py-3">
                 <div class="col-12 col-md-4 text-center text-md-left text-dark">
