@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->  
-    <link rel="stylesheet" href="/css/styleTabela.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styleTabela.css"> 
     <link rel="apple-touch-icon" sizes="180x180" href="./icones/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./icones/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icones/favicon-16x16.png">
@@ -103,11 +103,31 @@
                 <div class="modal-body">
                     <form id="form" class="modal-form">
                         <input type="text" id="nomeProduto" data-index="new" class="formodal modal-field" placeholder="Nome do Produto" required>
-                        <input type="text" id="preco" class="formodal modal-field" placeholder="Preço do Cliente" required>    
+                        <input type="text" id="preco" onkeypress="return somenteNumeros(event)" class="formodal modal-field" placeholder="Preço do Produto" required>    
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button id="modalClose" type="button" class="btn btn-danger btn-close" data-dismiss="modal" aria-label="Close">Fechar</button>
+                    <button id="salvar"  type="button" class="btn btn-info">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="meu_preco" data-dismiss="modal" data-keyboard="false" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastrar Produto</h5>
+                    <button id="fecharmodalTop" type="button" data-dismiss="modal">fechar</button>
+                </div>
+                <div class="modal-body">
+                    <form id="form" class="modal-form">
+                        <input type="text" id="meuPreco" class="formodal modal-field" placeholder="Preço do produto" required>    
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="modalClosex" type="button" class="btn btn-danger btn-close" data-dismiss="modal" aria-label="Close">Fechar</button>
                     <button id="salvar" type="button" class="btn btn-info">Salvar</button>
                 </div>
             </div>

@@ -84,6 +84,21 @@ const isValidfields = () => document.getElementById('form').reportValidity()// e
     }// salva o produto dentro do localStore e atualiza a tabela do HTML
     
 }
+function somenteNumeros(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    console.log(charCode)
+    // charCode 8 = backspace   
+    // charCode 9 = tab
+    if (charCode != 8 && charCode != 9) {
+        // charCode 48 equivale a 0   
+        // charCode 57 equivale a 9
+        if (charCode < 46 || charCode > 57) {
+            return false;
+        }
+    }else if(charCode == 46){
+        return true;
+    }
+}
 
 function criarLinha(produto, indice){
     const newLinha = document.createElement('tr')

@@ -1,11 +1,30 @@
 'use strict';
 
 document.getElementById('cadastrarProduto').addEventListener('click', mostrarModal)
+document.getElementById('meu_preco').addEventListener('click', precoNovo)
 document.getElementById('modalClose').addEventListener('click', closeModal);
+
+
 
 //----------------------------------------------------------------------------------------------------------------------
 const valorTotalprodutos = document.getElementById('valorTotalprodutos');// criando uma const com ID da div 
 const storeDinheiro = JSON.parse(localStorage.getItem('banco_produto'));// recebe os valores dos objetos
+
+function somenteNumeros(e) {
+    var charCode = e.charCode ? e.charCode : e.keyCode;
+    console.log(charCode)
+    // charCode 8 = backspace   
+    // charCode 9 = tab
+    if (charCode != 8 && charCode != 9) {
+        // charCode 48 equivale a 0   
+        // charCode 57 equivale a 9
+        if (charCode < 46 || charCode > 57) {
+            return false;
+        }
+    }else if(charCode == 46){
+        return true;
+    }
+}
 
 function atualizarValor(){ 
     const soma = storeDinheiro.map(item => parseFloat(item.valor)).reduce((a, b) => a + b, 0); 
@@ -22,6 +41,15 @@ function criarDinheiro(total){
     newElemento.innerHTML = `
     <span id="inputMoney" type="text" class="inputMoney col-6 display-4">${total}</span>`;
     document.querySelector('#valorTotalprodutos').appendChild(newElemento)
+}
+function precoNovo(){
+    const el = document.getElementById('meu_preco');
+    const meuPreco = new bootstrap.Modal(el);
+    meuPreco.show();
+}
+function closeModal(){
+    clearFields();
+    document.getElementById('meu_preco').classList.remove('show')
 }
 
 function mostrarModal(){
@@ -88,12 +116,14 @@ const isValidfields = () => document.getElementById('form').reportValidity()// e
 function criarLinha(produto, indice){
     const newLinha = document.createElement('tr')
     newLinha.innerHTML = `
-        <input class="checkboxItem form-check-input" type="checkbox" id="checke-${indice}"></input>
+        <input class="checado form-check-input form-switch" type="checkbox" role="switch" id="checke-${indice}">
+
         <th>${produto.nome}</th>
         <th id="produtoValortela">${produto.valor}</th>
+
         <th>
             <button type="button" class="btn btn-danger" id="excluir-${indice}">Excluir</button>
-        </th>
+        </th>  
     `
     document.querySelector('#tableProduto>thead').appendChild(newLinha)
 }// Criar elementos HTML 
@@ -112,22 +142,25 @@ function atualizarTabela(){
 
 // FUNÇÃO DOS Button E Checkbox
 function editDelete(event){
-    if(event.target.type === 'button' || 'checked'){
+    if(event.target.type === 'button' || 'checke'){
         const [action, indice] = event.target.id.split('-')
          if(action == 'excluir'){
         deletarProduto(indice)
         atualizarTabela();
-        }else if(action == 'checke'){
-            //document.querySelector('#tableProduto>thead').classList.add('text-decoration-line-through')
-            console.log("Checked produto");
-        }else if(action != 'checke'){
-            //document.querySelector('#tableProduto>thead').classList.remove('text-decoration-line-through')
-            console.log("Checked removido");
+        }else if(action === 'checke'){
+            
         }
     }
+}
+function checar() {
+    const checked = document.querySelectorAll('#theadIten>tr th')
+    checked.style = 'color: red;';
 }
 atualizarTabela();
 //evento
 document.getElementById('salvar').addEventListener('click', salvarProduto);
 document.getElementById('fecharmodalTop').addEventListener('click', closeModal);
 document.querySelector('#tableProduto>thead').addEventListener('click', editDelete);
+
+
+

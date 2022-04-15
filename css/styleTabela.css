@@ -31,12 +31,7 @@
 }
 
 /* checkbox */
-.checkboxItem > input[type='checkbox'] {
-    width: 50px;
-    height: 50px;
-    font: inherit;
-    border-radius: 50px;
-}
-#tableProduto > input[type='checkbox']:checked + tr{
-    text-decoration:line-through;
-}
+/* input[type=checkebox]:checked{
+    text-decoration: line-through;
+    color: red;
+  } */
