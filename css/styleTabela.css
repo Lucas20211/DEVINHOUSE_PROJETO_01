@@ -1,11 +1,3 @@
-:root{
-    --primary-color: #0d6efd;
-    --secundary-color: #FFF1CC;
-    --shadow-color: #CCC;
-    --text-color: #FFF;
-}
-
-
 .tabelaHeader{
     width: 100%;
     user-select: none;
@@ -21,17 +13,13 @@
     height: 50px;
     padding-left: 20px;
 }
-
 .tabelaHeader th:last-child,
 .tabelaHeader td:last-child{
     padding: 5px;
     min-width: 140px;
-    text-align: center;
-    
+    text-align: center;   
 }
-
 /* checkbox */
-/* input[type=checkebox]:checked{
+ input[type=checkebox]:checked{
     text-decoration: line-through;
-    color: red;
-  } */
+  } 
