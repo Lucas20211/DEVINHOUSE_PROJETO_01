@@ -16,10 +16,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./icones/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
     <title>Games Store</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-info border-bottom shadow-sm mb-3 ">
         <div class="container">
@@ -51,7 +49,6 @@
     <hr class="mb-2">
     <hr class="mb-2">
     <!--  *****************************   -->
-
 <main class="mb-2 pb-2">
         <!-- ===========================================================   -->
 <div class="container">
@@ -59,7 +56,6 @@
     <div class="conteinerDois">
             <button  type="button" class="btn btn-danger mb-3" id="cadastrarProduto">
             Cadastar Produto</button>
-
             <table class="tabelaHeader text-dark bg-info">
                 <thead>
                     <tr>
@@ -85,8 +81,7 @@
                 </div>
                 <div class="col-6">
                     <div id="valorTotalprodutos" class= "totalprodutosresult  mb-3 mt-3 py-3">
-                        <h2>Dinheiro</h2>
-                        
+                        <h2>Dinheiro</h2> 
                     </div>
                 </div>
             </div>        
@@ -103,7 +98,7 @@
                 <div class="modal-body">
                     <form id="form" class="modal-form">
                         <input type="text" id="nomeProduto" data-index="new" class="formodal modal-field" placeholder="Nome do Produto" required>
-                        <input type="text" id="preco" class="formodal modal-field" placeholder="Preço do Cliente" required>    
+                        <input type="text" id="preco" onkeypress="return somenteNumeros(event)" class="formodal modal-field" placeholder="Preço do Cliente" required>    
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -113,14 +108,11 @@
             </div>
         </div>
     </div>
-
     <!--  *****************************   -->
     <div class="d-block d-md-none" style="height: 273px;"></div>
     <div class="d-none d-md-block d-lg-none" style="height: 153px;"></div>
     <div class="d-none d-lg-block" style="height: 129px;"></div>
-
     <!--  *****************************   -->
-
     <footer class="border-top bg-info footer-bottom fixed-bottom">
         <div class="container">
             <div class="row py-3">
@@ -146,9 +138,7 @@
             </div>
         </div>
     </footer>
-    <!--  *****************************   -->
-    
-    
+    <!--  *****************************   -->   
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -157,5 +147,4 @@
     crossorigin="anonymous"></script>
     <script src="/js/lojarender.js"></script>
 </body>
-
 </html>
